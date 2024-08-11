@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fffff0;
+    z-index: 99;
+}
+
+.nav_content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    color: black;
+    font-family: Meddon, cursive;
+    font-size: 40px;
+    transition: .3s;
+}
+
+nav .logo a:hover {
+    color: gray;
+}
+
+nav .checkbox, nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: .5rem 1rem;
+    /* border: 2px solid transparent; */
+    text-decoration: none;
+    font-family: Abyssinica SIL, serif;
+    font-size: 20px;
+    color: black;
+    /* transition: 0.3s; */
+}
+
+ul li a:hover {
+    background-color: #DFDFCE;
+}
+
+main {
+    background-image: url("home-page-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.section_container {
+    height: 100vh;
+    max-width: (1200px);
+    margin: auto;
+    padding: 185px 150px;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 620px;
+    width: 588px;
+    font-family: Abyssinica SIL, serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div h1 {
+    color: black;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+div p {
+    color: black;
+    font-size: 24px;
+    text-align: justify;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* button {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    color: white;
+    margin-top: 20px;
+    margin-left: 100px;
+    padding: 10px 20px;
+    background-color: black;
+    border-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+} */
+
+
+
+button {
+    width: 100px;
+    padding: 10px 20px;
+    background-color: black;
+    border-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 100px;
+}
+
+button a {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    color: white;
+}
+
+button:hover {
+    background-color: #fffff0;
+}
+
+button a:hover {
+    color: black;
+}
+
+@media (max-width: 1366px) {
+    .section_container {
+        padding: 140px 5rem;
+    }
+    
+    .content {
+        max-width: 588px;
+        height:500px;
+        width: 460px;
+        padding: 2rem;
+    }
+    div h1{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    div p{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    button {
+        margin: 20px 30px 0;
+    }
+}
+
+@media (max-width: 1080px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    nav .logo a {
+        font-size: 2rem;
+        padding-left: 30px;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        top: 100px;
+        left: 100%;
+        background-color: #9D957F;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8rem;
+        padding-top: 5rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .content {
+        max-width: 590px;
+        height: 520px;
+        width: 360px;
+        padding: 1rem;
+      }
+
+    .section_container {
+
+        padding: 22vh 1vh;
+        text-align: left;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    div h1 {
+        font-size: 26px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+    div p {
+        font-size: 22px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+    button {
+        margin: 20px 30px 0;
+    }
+
+
+}

@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DFDFCE;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fffff0;
+    z-index: 99;
+}
+
+.nav_content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    color: black;
+    font-family: Meddon, cursive;
+    font-size: 40px;
+    transition: .3s;
+}
+
+nav .logo a:hover {
+    color: gray;
+}
+
+nav .checkbox, nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-family: Abyssinica SIL, serif;
+    font-size: 20px;
+    color: black;
+}
+
+ul li a:hover {
+    background-color: #DFDFCE;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top: 100px;
+}
+
+.item-1 {
+    grid-area: 1 / 1 / 3 / 2;
+    background-image: url("casamila.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+}
+
+.item-2 {
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url("plan-making.jpg");
+    background-size: cover;
+    height: 400px;
+}
+
+.item-3 {
+    grid-area: 2 / 2 / 3 / 3;
+    height: 400px;
+}
+
+.leftside {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15rem;
+}
+
+.heading1 {
+    font-family: Abyssinica SIL, serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+.description1 {
+    font-family: Abyssinica SIL, serif;
+    font-size: 24px;
+    text-align: justify;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    border-style: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button a {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    color: white;
+}
+
+button:hover {
+    background-color: #fffff0;
+}
+
+button a:hover {
+    color: black;
+}
+
+.heading2 {
+    font-family: Abyssinica SIL, serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.description2 {
+    font-family: Abyssinica SIL, serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.rightside {
+    background-color: #E0C784;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 150px;
+}
+
+@media (max-width: 1366px) {
+    
+    .container {
+        margin-top: -220px
+      }
+
+    .leftside {
+        padding: 9rem;
+          padding-top: 27rem;
+          padding-bottom: 13rem;
+    }
+
+    .heading1 {
+        padding-bottom: 22px;
+    }
+
+    .description1 {
+        padding-bottom: 10px;
+        margin-left: -27px;
+        margin-right: -27px;
+      }
+    
+    .item-2 {
+        height: 500px;
+    }
+    .item-3 {
+        height: 300px;
+    }
+    .rightside {
+        padding: 140px;
+    }
+    .heading2 {
+        padding-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 1080px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    nav .logo a {
+        font-size: 2rem;
+        padding-left: 30px;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        top: 100px;
+        left: 100%;
+        background-color: #9D957F;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8rem;
+        padding-top: 5rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.2rem;
+        color: black;
+    }
+    .container{
+        display: unset;
+    }
+    .item-1{
+        margin-bottom: -100px;
+        height: 650px;
+    }
+    .item-2 {
+        height: 0;
+    }
+    .item-3 {
+        height: 365px;
+    }
+      .heading1 {
+        font-family: Abyssinica SIL, serif;
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .description1 {
+        font-family: Abyssinica SIL, serif;
+        font-size: 20px;
+        text-align: justify;
+    }
+      .heading2 {
+        font-family: Abyssinica SIL, serif;
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .description2 {
+        font-family: Abyssinica SIL, serif;
+        font-size: 20px;
+        text-align: justify;
+    }
+    .leftside {
+        padding: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 13rem;
+      }
+    .rightside {
+        padding: 40px;
+      }
+}

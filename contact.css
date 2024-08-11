@@ -1,0 +1,248 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DFDFCE;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estilos de navegación */
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fffff0;
+    z-index: 99;
+}
+
+.nav_content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    color: black;
+    font-family: Meddon, cursive;
+    font-size: 40px;
+    transition: .3s;
+}
+
+nav .logo a:hover {
+    color: gray;
+}
+
+nav .checkbox, nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+nav ul li a {
+    padding: .5rem 1rem;
+    text-decoration: none;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 20px;
+    color: black;
+}
+
+nav ul li a:hover {
+    background-color: #DFDFCE;
+}
+
+/* Estilos del contenido principal */
+main {
+    background-image: url("barcelona.jpg");
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+    padding-top: 100px;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.subparent, .subparent2 {
+    width: 48%;
+    padding-top: 70px;
+}
+
+.div1, .div2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    height: 100%;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 18px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #fffff0;
+    color: black;
+}
+
+h1 {
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h2 {
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contactinfo {
+    padding-top: 100px;
+    list-style-type: none;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 16px;
+}
+
+.contactinfo li {
+    margin-bottom: 10px;
+}
+
+span {
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+footer {
+    background-color: #fffff0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer a, footer p {
+    color: black;
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 16px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 1080px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    nav .logo a {
+        font-size: 30px;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 100px);
+        top: 100px;
+        left: -100%;
+        background-color: #9D957F;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+        padding-top: 50px;
+        transition: 0.3s;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .parent {
+        flex-direction: column;
+    }
+
+    .subparent, .subparent2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer a, footer p {
+        margin: 5px 0;
+    }
+}

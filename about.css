@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fffff0;
+    z-index: 99;
+}
+
+.nav_content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    color: black;
+    font-family: Meddon, cursive;
+    font-size: 40px;
+    transition: .3s;
+}
+
+nav .logo a:hover {
+    color: gray;
+}
+
+nav .checkbox, nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+
+ul li a {
+    padding: .5rem 1rem;
+    /* border: 2px solid transparent; */
+    text-decoration: none;
+    font-family: Abyssinica SIL, serif;
+    font-size: 20px;
+    color: black;
+    /* transition: 0.3s; */
+}
+
+ul li a:hover {
+    background-color: #DFDFCE;
+}
+
+main {
+    background-image: url("about-page-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position-x: 0px;
+    background-position-y: 0px; */
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 115px;
+}
+
+.section_container {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 112px;
+    width: 1210px;
+    height: 555px;
+    border-radius: 40% / 100%;
+}
+
+
+
+.description {
+    font-family: Abyssinica SIL, serif;
+    font-size: 20px;
+    text-align: left;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 80px;
+    margin-top: -360px;
+}
+
+h1 {
+    font-family: Abyssinica SIL, serif;
+    font-size: 36px;
+    letter-spacing: 20px;
+    margin-left: 550px;
+    margin-right: 30px;
+}
+
+.aboutgaudi {
+    margin-left: 550px;
+    margin-right: 30px;
+}
+
+.motto {
+    margin-left: 550px;
+    margin-right: 30px;
+}
+
+
+
+.image {
+    float: left;
+    padding-top: 4.6rem;
+    padding-left: 6rem;
+}
+
+img {
+    width: min(400px, 80%);
+    border-radius: 100%;
+}
+
+@media (max-width: 600px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    nav .logo a {
+        font-size: 2rem;
+        padding-left: 30px;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        top: 100px;
+        left: 100%;
+        background-color: #9D957F;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8rem;
+        padding-top: 5rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.2rem;
+        color: black;
+    }
+}
